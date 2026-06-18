@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nome": "Ícone Casa",
+    "preco": 15.90,
+    "imagem": "https://cdn.awsli.com.br/2500x2500/873/873361/produto/58666198/4a795d05ff.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Ícone Sol",
+    "preco": 25.90,
+    "imagem": "https://cdn.awsli.com.br/500x500/873/873361/produto/58778333/629e61dfc3.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Ícone Lua",
+    "preco": 35.90,
+    "imagem": "https://cdn.awsli.com.br/500x500/873/873361/produto/58700523/a4c8d16364.jpg"
+  }
+]
