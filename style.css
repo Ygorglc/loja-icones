@@ -101,3 +101,11 @@ nav a{
     justify-content:center;
     gap:20px;
 }
+
+.slide{
+    display:none;
+}
+
+.slide.ativo{
+    display:flex;
+}
