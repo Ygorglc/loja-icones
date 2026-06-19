@@ -1,20 +1,35 @@
-const slides =
-    document.querySelectorAll('.slide');
+async function carregarProdutos() {
 
-let indice = 0;
+    const resposta =
+        await fetch('data/produtos.json');
 
-setInterval(() => {
+    const produtos =
+        await resposta.json();
 
-    slides[indice]
-        .classList.remove('ativo');
+    const container =
+        document.querySelector('.produtos');
 
-    indice++;
+    produtos.forEach(produto => {
 
-    if(indice >= slides.length){
-        indice = 0;
-    }
+        container.innerHTML += `
+            <div class="produto">
 
-    slides[indice]
-        .classList.add('ativo');
+                <img
+                    src="${produto.imagem}"
+                    alt="${produto.nome}"
+                >
 
-},3000);
+                <h3>
+                    ${produto.nome}
+                </h3>
+
+                <p>
+                    R$ ${produto.preco.toFixed(2)}
+                </p>
+
+            </div>
+        `;
+    });
+}
+
+carregarProdutos();
