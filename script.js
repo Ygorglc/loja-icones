@@ -22,10 +22,8 @@ async function carregarProdutos() {
         `;
 
         card.addEventListener("click", () => {
-            window.open(
-                `produto.html?id=${produto.id}`,
-                "_blank"
-            );
+            window.location.href =
+    `        produto.html?id=${produto.id}`;
         });
 
         container.appendChild(card);
