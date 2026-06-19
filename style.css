@@ -111,27 +111,26 @@ nav a{
 }
 
 .produto{
-    background:white;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
 
-    border-radius:10px;
-
-    overflow:hidden;
-
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-
-    text-align:center;
+.produto:hover{
+    transform: scale(1.03);
 }
 
 .produto img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .produto h3{
-    margin:10px 0;
-}
-
-.produto p{
-    margin-bottom:15px;
+    padding: 10px;
+    font-size: 16px;
 }
