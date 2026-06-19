@@ -1,4 +1,4 @@
-async function carregarProdutos() {
+async function carregarProdutos() { 
 
     const resposta =
         await fetch('data/produtos.json');
