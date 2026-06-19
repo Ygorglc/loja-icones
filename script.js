@@ -1,4 +1,4 @@
-async function carregarProdutos() { 
+async function carregarProdutos() {
 
     const resposta =
         await fetch('data/produtos.json');
@@ -9,26 +9,26 @@ async function carregarProdutos() {
     const container =
         document.querySelector('.produtos');
 
+    container.innerHTML = "";
+
     produtos.forEach(produto => {
 
-        container.innerHTML += `
-            <div class="produto">
+        const card = document.createElement("div");
+        card.classList.add("produto");
 
-                <img
-                    src="${produto.imagem}"
-                    alt="${produto.nome}"
-                >
-
-                <h3>
-                    ${produto.nome}
-                </h3>
-
-                <p>
-                    R$ ${produto.preco.toFixed(2)}
-                </p>
-
-            </div>
+        card.innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}">
+            <h3>${produto.nome}</h3>
         `;
+
+        card.addEventListener("click", () => {
+            window.open(
+                `produto.html?id=${produto.id}`,
+                "_blank"
+            );
+        });
+
+        container.appendChild(card);
     });
 }
 
