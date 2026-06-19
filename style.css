@@ -110,16 +110,22 @@ nav a:hover{
 
 @media (max-width: 768px){
 
-    .slide img{
+    .slider{
+        width:95%;
         height:250px;
+        margin:15px auto;
+        border-radius:10px;
     }
 
 }
 
 @media (max-width: 480px){
 
-    .slide img{
+    .slider{
+        width:100%;
         height:180px;
+        margin:10px 0;
+        border-radius:0;
     }
 
 }
