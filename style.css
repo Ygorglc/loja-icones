@@ -64,6 +64,19 @@ nav a{
     padding:10px;
 }
 
+@media (max-width: 768px){
+
+    .filtros{
+        flex-direction: column;
+    }
+
+    .filtros select,
+    .filtros input{
+        width: 100%;
+    }
+
+}
+
 .produtos{
 
     width:90%;
