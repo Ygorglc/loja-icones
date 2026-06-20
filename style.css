@@ -12,6 +12,8 @@
     --cor-creme:#F3E5D8;
     --cor-marrom:#5A2B1C;
     --cor-texto:#2B1A12;
+
+    --largura-conteudo:90%;
 }
 
 body{
@@ -75,7 +77,7 @@ nav a:hover{
 ========================== */
 
 .slider{
-    width:90%;
+    width:var(--largura-conteudo);
     height:450px;
 
     margin:20px auto;
@@ -112,7 +114,7 @@ nav a:hover{
 ========================== */
 
 .filtros{
-    width:90%;
+    width:var(--largura-conteudo);
 
     margin:auto;
 
@@ -150,7 +152,7 @@ nav a:hover{
 ========================== */
 
 .produtos{
-    width:90%;
+    width:var(--largura-conteudo);
 
     margin:auto;
 
@@ -261,26 +263,18 @@ nav a:hover{
 
     header{
         flex-direction:column;
-
         gap:15px;
-
         padding:15px;
     }
 
     nav{
         width:100%;
-
         justify-content:center;
-
         flex-wrap:wrap;
     }
 
     .slider{
-        width:95%;
         height:250px;
-
-        margin:15px auto;
-
         border-radius:12px;
     }
 
@@ -294,8 +288,7 @@ nav a:hover{
     }
 
     .produtos{
-        grid-template-columns:
-            repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
@@ -306,12 +299,9 @@ nav a:hover{
 @media (max-width:480px){
 
     .slider{
-        width:95%;
         height:180px;
-
-        margin:10px auto;
-
         border-radius:10px;
+        margin:10px auto;
     }
 
     .produtos{
