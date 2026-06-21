@@ -1,17 +1,25 @@
+let produtos = [];
+
 async function carregarProdutos() {
 
     const resposta =
         await fetch('data/produtos.json');
 
-    const produtos =
+    produtos =
         await resposta.json();
+
+    renderizarProdutos(produtos);
+
+}
+
+function renderizarProdutos(listaProdutos) {
 
     const container =
         document.querySelector('.produtos');
 
     container.innerHTML = "";
 
-    produtos.forEach(produto => {
+    listaProdutos.forEach(produto => {
 
         const card =
             document.createElement('div');
@@ -29,4 +37,53 @@ async function carregarProdutos() {
 
 }
 
-carregarProdutos();
+function pesquisarProdutos() {
+
+    const tipo =
+        document
+            .getElementById('filtroTipo')
+            .value
+            .toLowerCase();
+
+    const nome =
+        document
+            .getElementById('filtroNome')
+            .value
+            .toLowerCase();
+
+    const filtrados =
+        produtos.filter(produto => {
+
+            const atendeTipo =
+                !tipo ||
+                produto.tipo.toLowerCase() === tipo;
+
+            const atendeNome =
+                !nome ||
+                produto.nome
+                    .toLowerCase()
+                    .includes(nome);
+
+            return atendeTipo && atendeNome;
+
+        });
+
+    renderizarProdutos(filtrados);
+
+}
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+
+        carregarProdutos();
+
+        document
+            .getElementById('btnPesquisar')
+            .addEventListener(
+                'click',
+                pesquisarProdutos
+            );
+
+    }
+);
