@@ -409,3 +409,47 @@ footer{
     text-align:right;
 }
 
+/* ==========================
+   PESQUISAR
+========================== */
+.filtros button{
+
+    padding:12px 24px;
+
+    background:linear-gradient(
+        90deg,
+        var(--cor-vermelho),
+        var(--cor-laranja)
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 3px 8px rgba(0,0,0,.15);
+}
+
+.filtros button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,.20);
+
+    filter:brightness(1.05);
+}
+
+.filtros button:active{
+
+    transform:translateY(0);
+}
+
