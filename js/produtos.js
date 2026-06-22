@@ -42,8 +42,10 @@ function pesquisarProdutos() {
     const tipo =
         document
             .getElementById('filtroTipo')
-            .value
-            .toLowerCase();
+            .addEventListener(
+                'change',
+                pesquisarProdutos
+            );
 
     const nome =
         document
