@@ -47,19 +47,23 @@
 
     <section class="filtros">
 
-        <select>
-            <option>Categoria</option>
+        <select id="filtroTipo">
+            <option value="">Todos os tipos</option>
+            <option value="tradicional">Tradicional</option>
+            <option value="dourado">Dourado</option>
+            <option value="especial">Especial</option>
         </select>
-
-        <select>
-            <option>Tamanho</option>
-        </select>
-
+    
         <input
             type="text"
-            placeholder="Pesquisar..."
+            id="filtroNome"
+            placeholder="Pesquisar por nome..."
         >
-
+    
+        <button id="btnPesquisar">
+            Pesquisar
+        </button>
+    
     </section>
 
         <section class="produtos">
