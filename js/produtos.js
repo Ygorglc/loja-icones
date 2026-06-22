@@ -87,3 +87,16 @@ document.addEventListener(
 
     }
 );
+
+document
+    .getElementById('filtroNome')
+    .addEventListener(
+        'keypress',
+        function(event){
+
+            if(event.key === 'Enter'){
+                pesquisarProdutos();
+            }
+
+        }
+    );
