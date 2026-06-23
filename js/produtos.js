@@ -1,5 +1,13 @@
 let produtos = [];
 
+function removerAcentos(texto) {
+
+    return texto
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+
+}
+
 async function carregarProdutos() {
 
     const resposta =
@@ -51,6 +59,9 @@ function pesquisarProdutos() {
             .value
             .toLowerCase();
 
+    const nomeSemAcento =
+        removerAcentos(nome);
+
     const filtrados =
         produtos.filter(produto => {
 
@@ -60,9 +71,9 @@ function pesquisarProdutos() {
 
             const atendeNome =
                 !nome ||
-                produto.nome
-                    .toLowerCase()
-                    .includes(nome);
+                removerAcentos(
+                    produto.nome.toLowerCase()
+                ).includes(nomeSemAcento);
 
             return atendeTipo && atendeNome;
 
