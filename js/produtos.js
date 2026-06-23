@@ -42,10 +42,8 @@ function pesquisarProdutos() {
     const tipo =
         document
             .getElementById('filtroTipo')
-            .addEventListener(
-                'change',
-                pesquisarProdutos
-            );
+            .value
+            .toLowerCase();
 
     const nome =
         document
@@ -87,18 +85,25 @@ document.addEventListener(
                 pesquisarProdutos
             );
 
+        document
+            .getElementById('filtroTipo')
+            .addEventListener(
+                'change',
+                pesquisarProdutos
+            );
+
+        document
+            .getElementById('filtroNome')
+            .addEventListener(
+                'keypress',
+                function(event){
+
+                    if(event.key === 'Enter'){
+                        pesquisarProdutos();
+                    }
+
+                }
+            );
+
     }
 );
-
-document
-    .getElementById('filtroNome')
-    .addEventListener(
-        'keypress',
-        function(event){
-
-            if(event.key === 'Enter'){
-                pesquisarProdutos();
-            }
-
-        }
-    );
