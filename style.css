@@ -453,3 +453,211 @@ footer{
     transform:translateY(0);
 }
 
+/* ==========================
+   PÁGINA DO PRODUTO
+========================== */
+
+.produto-detalhe{
+
+    width:var(--largura-conteudo);
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+}
+
+.produto-imagem{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+}
+
+.produto-imagem img{
+
+    width:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+.produto-info{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+}
+
+.produto-info h1{
+
+    color:var(--cor-marrom);
+
+    margin-bottom:15px;
+}
+
+.produto-info p{
+
+    margin-bottom:20px;
+
+    font-size:18px;
+}
+
+.produto-info label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+}
+
+.produto-info select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid var(--cor-dourado);
+
+    border-radius:8px;
+
+    font-size:16px;
+}
+
+.quantidade{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:10px;
+}
+
+.quantidade button{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:var(--cor-vermelho);
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.quantidade button:hover{
+
+    background:var(--cor-vinho);
+}
+
+.quantidade span{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    min-width:30px;
+
+    text-align:center;
+}
+
+#preco{
+
+    margin-top:25px;
+
+    margin-bottom:25px;
+
+    color:var(--cor-vermelho);
+
+    font-size:32px;
+}
+
+.btn-carrinho{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        var(--cor-vermelho),
+        var(--cor-laranja)
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.btn-carrinho:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,.2);
+}
+
+/* ==========================
+   RESPONSIVO
+========================== */
+
+@media (max-width:768px){
+
+    .produto-detalhe{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    .produto-info{
+
+        padding:20px;
+    }
+
+    #preco{
+
+        font-size:28px;
+    }
+
+}
+
