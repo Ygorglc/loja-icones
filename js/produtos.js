@@ -39,6 +39,16 @@ function renderizarProdutos(listaProdutos) {
             <h3>${produto.nome}</h3>
         `;
 
+        card.addEventListener(
+            'click',
+            () => {
+
+                window.location.href =
+                    `produto.html?id=${produto.id}`;
+
+            }
+        );
+
         container.appendChild(card);
 
     });
