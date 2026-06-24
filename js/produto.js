@@ -154,14 +154,28 @@ function adicionarAoCarrinho() {
                 'carrinho'
             )
         ) || [];
-
-    carrinho.push(item);
-
+    
+    const itemExistente =
+        carrinho.find(
+            p =>
+                p.id === item.id &&
+                p.tamanho === item.tamanho
+        );
+    
+    if(itemExistente){
+    
+        itemExistente.quantidade +=
+            item.quantidade;
+    
+    }else{
+    
+        carrinho.push(item);
+    
+    }
+    
     localStorage.setItem(
         'carrinho',
-        JSON.stringify(
-            carrinho
-        )
+        JSON.stringify(carrinho)
     );
 
     alert(
