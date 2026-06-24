@@ -657,3 +657,88 @@ footer{
 
 }
 
+/* ==========================
+   CARRINHO
+========================== */
+
+.carrinho-container{
+
+    width:var(--largura-conteudo);
+
+    margin:40px auto;
+}
+
+.item-carrinho{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:center;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+}
+
+.item-carrinho img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+}
+
+.item-carrinho h3{
+
+    margin-bottom:10px;
+
+    color:var(--cor-marrom);
+}
+
+.item-carrinho p{
+
+    margin-bottom:5px;
+}
+
+.resumo-carrinho{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.08);
+
+    text-align:right;
+}
+
+.resumo-carrinho h2{
+
+    margin-bottom:20px;
+
+    color:var(--cor-vermelho);
+}
+
+@media (max-width:768px){
+
+    .item-carrinho{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
