@@ -20,6 +20,11 @@ body{
     font-family:Arial, sans-serif;
     background:var(--cor-creme);
     color:var(--cor-texto);
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
 }
 
 /* ==========================
