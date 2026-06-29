@@ -68,7 +68,7 @@ produtosPagina.forEach(produto => {
         () => {
 
             window.location.href =
-                \`produto.html?id=${produto.id}\`;
+                `produto.html?id=${produto.id}`;
 
         }
     );
