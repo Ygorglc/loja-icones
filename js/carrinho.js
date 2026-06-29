@@ -205,3 +205,53 @@ function finalizarPedido() {
     );
 
 }
+
+function limparCarrinho() {
+
+    const confirmar =
+        confirm(
+            'Deseja realmente limpar o carrinho?'
+        );
+
+    if(!confirmar){
+        return;
+    }
+
+    localStorage.removeItem(
+        'carrinho'
+    );
+
+    carregarCarrinho();
+
+    atualizarContadorCarrinho();
+
+}
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+
+        carregarCarrinho();
+
+        atualizarContadorCarrinho();
+
+        document
+            .getElementById(
+                'btnFinalizar'
+            )
+            .addEventListener(
+                'click',
+                finalizarPedido
+            );
+
+        document
+            .getElementById(
+                'btnLimparCarrinho'
+            )
+            .addEventListener(
+                'click',
+                limparCarrinho
+            );
+
+    }
+);
