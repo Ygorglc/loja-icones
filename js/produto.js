@@ -182,6 +182,9 @@ function adicionarAoCarrinho() {
         'Produto adicionado ao carrinho!'
     );
 
+    window.location.href =
+    'carrinho.html';
+
 }
 
 document.addEventListener(
