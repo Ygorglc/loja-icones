@@ -26,8 +26,6 @@ body{
     display:flex;
     flex-direction:column;
 
-    padding-top:110px;
-
     font-family:Arial, sans-serif;
     background:var(--cor-creme);
     color:var(--cor-texto);
