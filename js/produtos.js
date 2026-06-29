@@ -4,7 +4,7 @@ let produtosFiltrados = [];
 
 let paginaAtual = 1;
 
-const produtosPorPagina = 12;
+const produtosPorPagina = 6;
 
 function removerAcentos(texto) {
 
